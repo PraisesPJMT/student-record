@@ -21,14 +21,12 @@ Before running the program, make sure you have the following dependencies instal
 
 If you don't have the C compiler installed, you can install it by following the instructions for your operating system.
 
-
 ## 👋 About the Author
 
 ### Musa Praises Tula
 
 - Email: praises.musa@miva.edu.ng
 - GitHub: [@PraisesPJMT](https://github.com/PraisesPJMT)
-
 
 ### IPADEOLA KABIR ADENIYI
 
@@ -43,8 +41,7 @@ If you don't have the C compiler installed, you can install it by following the 
 ### MODEBELU EKENE GODWIN
 
 - Email: ekene.modebelu@miva.edu.ng
-- GitHub: [@KENNYG](https://github.com/KENNYG)
-
+- GitHub: [@kendobest](https://github.com/kendobest)
 
 ### ULOKO JONATHAN
 
