@@ -2,6 +2,7 @@
 #include <string.h>
 #include "student.h"
 #include "greetings.c"
+#include "add_student.c"
 
 #define MAX_STUDENTS 100
 
@@ -49,7 +50,13 @@ int main() {
         switch (choice) {
             case 1:
                 // Add Student
-                printf("Functionality in progress!\n");
+                if (num_students >= MAX_STUDENTS) {
+                    printf("Maximum number of students reached. Cannot add more.\n");
+                    printf("-------------------------------------------------\n");
+                    printf("=================================================\n");
+                    break;
+                }
+                add_student(students, &num_students);
                 break;
             case 2:
                 // Modify Student
