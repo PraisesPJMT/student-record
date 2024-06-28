@@ -30,6 +30,6 @@ typedef struct {
 } student_t;
 
 void greet(char *name);
-
+void remove_student(student_t *students, int *num_students);
 
 #endif

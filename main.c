@@ -2,6 +2,7 @@
 #include <string.h>
 #include "student.h"
 #include "greetings.c"
+#include "remove_student.c"
 
 #define MAX_STUDENTS 100
 
@@ -57,7 +58,13 @@ int main() {
                 break;
             case 3:
                 // Remove Student
-                printf("Functionality in progress!\n");
+                  if (num_students == 0) {
+                    printf("No students found. Cannot remove.\n");
+                    printf("-------------------------------------------------\n");
+                    printf("=================================================\n");
+                    break;
+                }
+                remove_student(students, &num_students);
                 break;
             case 4:
                 // Display Students
