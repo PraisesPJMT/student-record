@@ -31,6 +31,9 @@ typedef struct {
 
 void greet(char *name);
 
+
+void add_student(student_t *students, int *num_students);
+
 void modify_student(student_t *students, int num_students);
 
 void remove_student(student_t *students, int *num_students);
