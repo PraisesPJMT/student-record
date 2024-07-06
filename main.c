@@ -2,8 +2,10 @@
 #include <string.h>
 #include "student.h"
 #include "greetings.c"
+#include "modify_student.c"
 #include "remove_student.c"
 #include "add_student.c"
+
 
 #define MAX_STUDENTS 100
 
@@ -61,7 +63,13 @@ int main() {
                 break;
             case 2:
                 // Modify Student
-                printf("Functionality in progress!\n");
+                if (num_students == 0) {
+                    printf("No students found. Cannot modify.\n");
+                    printf("-------------------------------------------------\n");
+                    printf("=================================================\n");
+                    break;
+                }
+                modify_student(students, num_students);
                 break;
             case 3:
                 // Remove Student
