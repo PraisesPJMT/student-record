@@ -38,5 +38,7 @@ void modify_student(student_t *students, int num_students);
 
 void remove_student(student_t *students, int *num_students);
 
+void search_student(student_t *students, int num_students);
+
 
 #endif
