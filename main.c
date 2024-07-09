@@ -5,6 +5,7 @@
 #include "modify_student.c"
 #include "remove_student.c"
 #include "add_student.c"
+#include "search_student.c"
 
 
 #define MAX_STUDENTS 100
@@ -87,7 +88,13 @@ int main() {
                 break;
             case 5:
                 // Search Student
-                printf("Functionality in progress!\n");
+                 if (num_students == 0) {
+                    printf("No students found. Cannot search.\n");
+                    printf("-------------------------------------------------\n");
+                    printf("=================================================\n");
+                    break;
+                }
+                search_student(students, num_students);
                 break;
             case 6:
                 // Calculate average
