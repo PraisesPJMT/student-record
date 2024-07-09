@@ -6,6 +6,7 @@
 #include "remove_student.c"
 #include "add_student.c"
 #include "search_student.c"
+#include "file_operations.c"
 
 
 #define MAX_STUDENTS 100
@@ -106,11 +107,17 @@ int main() {
                 break;
             case 8:
                 // Save to file
-                printf("Functionality in progress!\n");
+                if (num_students == 0) {
+                    printf("No students found. Cannot save.\n");
+                    printf("-------------------------------------------------\n");
+                    printf("=================================================\n");
+                    break;
+                }
+                save_to_file(students, num_students);
                 break;
             case 9:
                 // Load from file
-                printf("Functionality in progress!\n");
+                load_from_file(students, &num_students);
                 break;
             case 10:
                 // Exit the program
