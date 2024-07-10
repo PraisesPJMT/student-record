@@ -6,6 +6,7 @@
 #include "remove_student.c"
 #include "add_student.c"
 #include "search_student.c"
+#include "sort_student.c"
 
 
 #define MAX_STUDENTS 100
@@ -102,7 +103,13 @@ int main() {
                 break;
             case 7:
                 // Sort students
-                printf("Functionality in progress!\n");
+                if (num_students == 0) {
+                    printf("No students found. Cannot sort.\n");
+                    printf("-------------------------------------------------\n");
+                    printf("=================================================\n");
+                    break;
+                }
+                sort_students(students, num_students);
                 break;
             case 8:
                 // Save to file
