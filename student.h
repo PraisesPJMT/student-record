@@ -46,5 +46,7 @@ void save_to_file(student_t *students, int num_students);
 
 void load_from_file(student_t *students, int *num_students);
 
+void calculate_average(student_t *students, int num_students);
+
 
 #endif
