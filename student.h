@@ -40,6 +40,14 @@ void remove_student(student_t *students, int *num_students);
 
 void search_student(student_t *students, int num_students);
 
+void sort_students(student_t *students, int num_students);
+
+int file_exists(const char *filename);
+
+void save_to_file(student_t *students, int num_students);
+
+void load_from_file(student_t *students, int *num_students);
+
 void calculate_average(student_t *students, int num_students);
 
 
