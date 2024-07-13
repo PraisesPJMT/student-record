@@ -7,6 +7,7 @@
 #include "add_student.c"
 #include "search_student.c"
 #include "sort_student.c"
+#include "calculate average_student.c"
 
 
 #define MAX_STUDENTS 100
@@ -99,7 +100,13 @@ int main() {
                 break;
             case 6:
                 // Calculate average
-                printf("Functionality in progress!\n");
+                if (num_students == 0) {
+                    printf("No students found. Cannot calculate average.\n");
+                    printf("-------------------------------------------------\n");
+                    printf("=================================================\n");
+                    break;
+                }
+                calculate_average(students, num_students);
                 break;
             case 7:
                 // Sort students
