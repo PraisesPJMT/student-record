@@ -3,6 +3,7 @@
 #include "student.h"
 #include "greetings.c"
 #include "modify_student.c"
+#include "display_student.c"
 #include "remove_student.c"
 #include "add_student.c"
 #include "search_student.c"
@@ -87,7 +88,13 @@ int main() {
                 break;
             case 4:
                 // Display Students
-                printf("Functionality in progress!\n");
+                if (num_students == 0) {
+                    printf("No students found. Cannot display.\n");
+                    printf("-------------------------------------------------\n");
+                    printf("=================================================\n");
+                    break;
+                }
+                display_students(students, num_students);
                 break;
             case 5:
                 // Search Student
