@@ -14,8 +14,11 @@
  *
  * This struct holds the information of a student.
  *
- * @var char name[50]
- * The name of the student.
+ * @var char first_name[20]
+ * The first name of the student.
+ *
+ * @var char last_name[30]
+ * The last name of the student.
  *
  * @var int roll_number
  * The roll number of the student.
@@ -24,16 +27,19 @@
  * The marks of the student.
  */
 typedef struct {
-    char name[50];
+    char first_name[20];
+    char last_name[20];
     int roll_number;
     float marks;
 } student_t;
 
 void greet(char *name);
+
 void display_students(student_t *students, int num_students);
+
 void add_student(student_t *students, int *num_students);
 
-void modify_student(student_t *students, int num_students); 
+void modify_student(student_t *students, int num_students);
 
 void remove_student(student_t *students, int *num_students);
 
@@ -48,6 +54,5 @@ void save_to_file(student_t *students, int num_students);
 void load_from_file(student_t *students, int *num_students);
 
 void calculate_average(student_t *students, int num_students);
-
 
 #endif

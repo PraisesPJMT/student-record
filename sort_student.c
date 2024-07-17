@@ -14,7 +14,7 @@
 void sort_students(student_t *students, int num_students) {
     printf("=================================================\n");
     printf("-------------------------------------------------\n");
-    printf("               Sorting Students by Marks\n");
+    printf("               Sorted Students by Marks\n");
     printf("-------------------------------------------------\n");
     printf("=================================================\n");
     for (int i = 0; i < num_students - 1; i++) {
@@ -26,11 +26,16 @@ void sort_students(student_t *students, int num_students) {
             }
         }
     }
-    printf("Sorted students:\n");
+
+    printf("--------------------------------------------\n");
+    printf("| %-5s | %-21s | %-5s |\n", "Roll No.", "Full Name", "Marks");
+    printf("--------------------------------------------\n");
+
     for (int i = 0; i < num_students; i++) {
-        printf("%s: %.2f\n", students[i].name, students[i].marks);
+        printf("| %-8d | %-10s %-10s | %-5.2f |\n",
+            students[i].roll_number, students[i].first_name, students[i].last_name, students[i].marks);
     }
-    printf("-------------------------------------------------\n");
+    printf("--------------------------------------------\n");
     printf("=================================================\n");
 
 }

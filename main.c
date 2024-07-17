@@ -9,7 +9,7 @@
 #include "search_student.c"
 #include "sort_student.c"
 #include "file_operations.c"
-#include "calculate average_student.c"
+#include "calculate_average_student.c"
 
 
 #define MAX_STUDENTS 100
@@ -23,15 +23,15 @@ int main() {
     int num_students = 0;
 
     // Initial Setup
-    char name[50];
+    char user_name[50];
     printf("=================================================\n");
     printf("=================================================\n");
     printf("Welcome to the Student Record System! \n");
     printf("=================================================\n");
     printf("=================================================\n");
     printf("Please enter your name: ");
-    scanf("%s", name);
-    greet(name);
+    scanf("%s", user_name);
+    greet(user_name);
 
     while (1) {
         // Display Menu
@@ -144,7 +144,7 @@ int main() {
                 // Exit the program
                 printf("=================================================\n");
                 printf("=================================================\n");
-                printf("Goodbye!\n");
+                printf("         Goodbye %s!\n", user_name);
                 printf("=================================================\n");
                 printf("=================================================\n");
                 return 0;

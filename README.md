@@ -33,11 +33,6 @@ If you don't have the C compiler installed, you can install it by following the 
 - Email: ipadeola.kabir@miva.edu.ng
 - GitHub: [@Pintogen](https://github.com/Pintogen)
 
-### SYLVESTER JOHN
-
-- Email: john.sylvester@miva.edu.ng
-- GitHub: [@Sarjohnny](https://github.com/Sarjohnny)
-
 ### MODEBELU EKENE GODWIN
 
 - Email: ekene.modebelu@miva.edu.ng

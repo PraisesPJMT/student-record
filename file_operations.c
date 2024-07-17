@@ -37,7 +37,7 @@ void save_to_file(student_t *students, int num_students) {
     }
 
     for (int i = 0; i < num_students; i++) {
-        fprintf(fp, "%s %d %.2f\n", students[i].name, students[i].roll_number, students[i].marks);
+        fprintf(fp, "%s %s %d %.2f\n", students[i].first_name, students[i].last_name, students[i].roll_number, students[i].marks);
     }
 
     fclose(fp);
@@ -91,7 +91,7 @@ void load_from_file(student_t *students, int *num_students) {
 
     while (!feof(fp)) {
         student_t student;
-        fscanf(fp, "%s %d %f", student.name, &student.roll_number, &student.marks);
+        fscanf(fp, "%s %s %d %f", student.first_name, student.last_name, &student.roll_number, &student.marks);
         students[*num_students] = student;
         (*num_students)++;
     }
