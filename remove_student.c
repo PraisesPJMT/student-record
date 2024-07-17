@@ -26,7 +26,7 @@ void remove_student(student_t *students, int *num_students) {
     for (int i = 0; i < *num_students; i++) {
         if (students[i].roll_number == roll_number) {
             index = i;
-            strcpy(remove_student, students[i].name);
+            strcpy(remove_student, students[i].first_name);
             break;
         }
     }
@@ -46,4 +46,4 @@ void remove_student(student_t *students, int *num_students) {
 
     printf("-------------------------------------------------\n");
     printf("=================================================\n");
-} 
+}

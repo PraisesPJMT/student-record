@@ -25,8 +25,11 @@ void search_student(student_t *students, int num_students) {
     scanf("%d", &roll_number);
     for (int i = 0; i < num_students; i++) {
         if (students[i].roll_number == roll_number) {
-            printf("Name: %s, Marks: %.2f\n",
-                   students[i].name, students[i].marks);
+            printf("\n-------------------------------------------------\n");
+            printf("Student Found!!\n");
+            printf("-------------------------------------------------\n");
+            printf("Roll N0.: %d, Name: %s %s, Marks: %.2f\n",
+                   students[i].roll_number, students[i].first_name, students[i].last_name, students[i].marks);
 
             printf("-------------------------------------------------\n");
             printf("=================================================\n");

@@ -3,12 +3,13 @@
 #include "student.h"
 #include "greetings.c"
 #include "modify_student.c"
+#include "display_student.c"
 #include "remove_student.c"
 #include "add_student.c"
 #include "search_student.c"
 #include "sort_student.c"
 #include "file_operations.c"
-#include "calculate average_student.c"
+#include "calculate_average_student.c"
 
 
 #define MAX_STUDENTS 100
@@ -22,15 +23,15 @@ int main() {
     int num_students = 0;
 
     // Initial Setup
-    char name[50];
+    char user_name[50];
     printf("=================================================\n");
     printf("=================================================\n");
     printf("Welcome to the Student Record System! \n");
     printf("=================================================\n");
     printf("=================================================\n");
     printf("Please enter your name: ");
-    scanf("%s", name);
-    greet(name);
+    scanf("%s", user_name);
+    greet(user_name);
 
     while (1) {
         // Display Menu
@@ -87,7 +88,13 @@ int main() {
                 break;
             case 4:
                 // Display Students
-                printf("Functionality in progress!\n");
+                if (num_students == 0) {
+                    printf("No students found. Cannot display.\n");
+                    printf("-------------------------------------------------\n");
+                    printf("=================================================\n");
+                    break;
+                }
+                display_students(students, num_students);
                 break;
             case 5:
                 // Search Student
@@ -137,7 +144,7 @@ int main() {
                 // Exit the program
                 printf("=================================================\n");
                 printf("=================================================\n");
-                printf("Goodbye!\n");
+                printf("         Goodbye %s!\n", user_name);
                 printf("=================================================\n");
                 printf("=================================================\n");
                 return 0;
