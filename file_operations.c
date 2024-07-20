@@ -89,10 +89,12 @@ void load_from_file(student_t *students, int *num_students) {
         return;
     }
 
-    while (!feof(fp)) {
-        student_t student;
-        fscanf(fp, "%s %s %d %f", student.first_name, student.last_name, &student.roll_number, &student.marks);
-        students[*num_students] = student;
+    while (fscanf(fp,
+        "%s %s %d %f",
+        students[*num_students].first_name,
+        students[*num_students].last_name,
+        &students[*num_students].roll_number,
+        &students[*num_students].marks) == 4) {
         (*num_students)++;
     }
 
